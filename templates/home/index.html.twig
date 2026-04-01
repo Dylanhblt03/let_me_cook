@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Let Me Cook - Accueil{% endblock %}
+
+{% block body %}
+    <nav class="menu-nav navbar navbar-expand-lg">
+        <div class="container">
+            <a class="logo navbar-brand" href="{{ path('app_home') }}">Let Me Cook</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="lien-nav" href="{{ path('app_recettes') }}">Nos recettes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section-hero">
+        <div class="container">
+            <h1 class="titre-hero">Let Me Cook</h1>
+            <p class="sous-titre-hero">
+                Découvrez, partagez et cuisinez des recettes délicieuses.<br>
+                Trouvez l'inspiration pour vos repas du quotidien, quel que soit votre niveau.
+            </p>
+
+            <div class="barre-recherche mx-auto mb-4">
+                <form class="row g-2 justify-content-center" method="get" action="{{ path('app_recettes') }}">
+                    <div class="col-auto">
+                        <select class="form-select" name="difficulte">
+                            <option value="">Difficulté</option>
+                            <option value="facile">Facile</option>
+                            <option value="moyen">Moyen</option>
+                            <option value="difficile">Difficile</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="form-select" name="duree">
+                            <option value="">Durée</option>
+                            <option value="15">Moins de 15 min</option>
+                            <option value="30">Moins de 30 min</option>
+                            <option value="60">Moins de 1h</option>
+                            <option value="61">Plus de 1h</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="form-select" name="auteur">
+                            <option value="">Auteur</option>
+                            {% for author in authors %}
+                                <option value="{{ author }}">{{ author }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="bouton-principal">Rechercher</button>
+                    </div>
+                </form>
+            </div>
+
+            <a href="{{ path('app_recettes') }}" class="bouton-outline">Voir toutes les recettes</a>
+        </div>
+    </section>
+{% endblock %}

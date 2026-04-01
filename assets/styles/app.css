@@ -1,3 +1,149 @@
 body {
-    background-color: skyblue;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.menu-nav {
+    background-color: #333;
+}
+
+.menu-nav .logo {
+    color: #ff9800;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.menu-nav .lien-nav {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
+.menu-nav .lien-nav:hover {
+    color: #ff9800;
+}
+
+.section-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.titre-hero {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sous-titre-hero {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.barre-recherche {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.bouton-principal {
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bouton-principal:hover {
+    background-color: #e68900;
+    color: white;
+}
+
+.bouton-outline {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.bouton-outline:hover {
+    background-color: #ff9800;
+    border-color: #ff9800;
+    color: white;
+}
+
+.page-recettes {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('https://static.vecteezy.com/ti/photos-gratuite/p1/29570983-cuisine-bois-planche-restaurant-fond-d-ecran-en-bois-table-toile-de-fond-photo.jpg') center/cover no-repeat fixed;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.titre-page {
+    font-family: 'Caveat', cursive;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.carte-recette {
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    background-color: #2c2c2c;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.carte-contenu {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.carte-titre {
+    font-family: 'Caveat', cursive;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.carte-description {
+    font-size: 15px;
+    color: #cccccc;
+    margin-bottom: 0;
+}
+
+.carte-infos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #444;
+}
+
+.carte-info {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #cccccc;
+    border-bottom: 1px solid #444;
+}
+
+.carte-info:last-child {
+    border-bottom: none;
 }
