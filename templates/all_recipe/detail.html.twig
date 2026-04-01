@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ recipe.title }} - Let Me Cook{% endblock %}
+
+{% block body %}
+    <nav class="menu-nav navbar navbar-expand-lg">
+        <div class="container">
+            <a class="logo navbar-brand" href="{{ path('app_home') }}">Let Me Cook</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="lien-nav" href="{{ path('app_recettes') }}">Nos recettes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-recettes">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="carte-recette">
+                        <div class="carte-contenu">
+                            <h1 class="carte-titre carte-titre-grand">{{ recipe.title }}</h1>
+                            <p class="carte-description">{{ recipe.description }}</p>
+                        </div>
+                        <ul class="carte-infos">
+                            <li class="carte-info">Difficulté : {{ recipe.difficulty }}</li>
+                            <li class="carte-info">Durée : {{ recipe.duration }} min</li>
+                            <li class="carte-info">
+                                Auteur : <a href="{{ path('app_recettes_auteur', {author: recipe.author}) }}" class="lien-auteur">{{ recipe.author }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="{{ path('app_recettes') }}" class="bouton-outline bouton-retour">Retour aux recettes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

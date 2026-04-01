@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nos recettes - Let Me Cook{% endblock %}
+{% block title %}Recettes de {{ author }} - Let Me Cook{% endblock %}
 
 {% block body %}
     <nav class="menu-nav navbar navbar-expand-lg">
@@ -16,7 +16,7 @@
 
     <div class="page-recettes">
         <div class="container">
-            <h1 class="titre-page text-center">Toutes les recettes</h1>
+            <h1 class="titre-page text-center">Recettes de {{ author }}</h1>
 
             <div class="row">
                 {% for recipe in recipes %}
@@ -31,14 +31,16 @@
                             <ul class="carte-infos">
                                 <li class="carte-info">Difficulté : {{ recipe.difficulty }}</li>
                                 <li class="carte-info">Durée : {{ recipe.duration }} min</li>
-                                <li class="carte-info">Auteur : <a href="{{ path('app_recettes_auteur', {author: recipe.author}) }}" class="lien-auteur">{{ recipe.author }}</a></li>
+                                <li class="carte-info">Auteur : {{ recipe.author }}</li>
                             </ul>
                         </div>
                     </div>
                 {% else %}
-                    <p>Aucune recette pour le moment.</p>
+                    <p>Aucune recette pour cet auteur.</p>
                 {% endfor %}
             </div>
+
+            <a href="{{ path('app_recettes') }}" class="bouton-outline">Retour aux recettes</a>
         </div>
     </div>
 {% endblock %}

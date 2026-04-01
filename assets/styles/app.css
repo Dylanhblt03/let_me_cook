@@ -147,3 +147,28 @@ body {
 .carte-info:last-child {
     border-bottom: none;
 }
+
+.lien-carte {
+    text-decoration: none;
+}
+
+.lien-carte:hover .carte-titre {
+    color: #ff9800;
+}
+
+.lien-auteur {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+.lien-auteur:hover {
+    text-decoration: underline;
+}
+
+.carte-titre-grand {
+    font-size: 36px;
+}
+
+.bouton-retour {
+    margin-top: 20px;
+}
